@@ -4,3 +4,9 @@
 
 layout: home
 ---
+
+Hi, what a coincidence you are here. 
+
+Nice to meet you.
+
+Have a good day!
