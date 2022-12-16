@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+
+    <link rel="dns-prefetch" //cdn.jsdelivr.net>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css">
+
+
+
+    
+<link rel="stylesheet" href="/css/prism-m.css">
+
+    
+
+
+
+<meta name="theme-color" content="#3F51B5">
+
+
+<style>
+    html,body{scroll-behavior:smooth;min-height:100vh}
+    blockquote>strong>a{word-break:break-all}
+    .mdui-hoverable:hover,.mdui-hoverable:focus{-webkit-box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;}
+    .mdui-card-primary-title a{text-decoration:none !important}
+    .page-number{display:none !important}
+    .mdui-container-fluid{transition:opacity .4s}
+    
+        body{background-color: #f6f6f6}
+
+    
+</style>
+    
+    <title>vim配置 | Minamoto&#39;s space</title>
+    <link rel="canonical" href="https://minamoto25.github.io/2022/12/16/vim%E9%85%8D%E7%BD%AE/">
+    <meta name="description" content="Missing class in cs 中所提供的vim配置文件。修改~&#x2F;.vimrc为如下内容，可以简单的配置vim编辑的界面。 &quot; Comments in Vimscript start with a &#96;&quot;&#96;.  &quot; If you open this file in Vim, it&#39;ll be syntax highlighted for you.  &quot; Vim is based o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim配置">
+<meta property="og:url" content="https://minamoto25.github.io/2022/12/16/vim%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="Minamoto&#39;s space">
+<meta property="og:description" content="Missing class in cs 中所提供的vim配置文件。修改~&#x2F;.vimrc为如下内容，可以简单的配置vim编辑的界面。 &quot; Comments in Vimscript start with a &#96;&quot;&#96;.  &quot; If you open this file in Vim, it&#39;ll be syntax highlighted for you.  &quot; Vim is based o">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-16T11:57:50.000Z">
+<meta property="article:modified_time" content="2022-12-16T04:12:37.478Z">
+<meta property="article:author" content="Minamoto">
+<meta name="twitter:card" content="summary">
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-appbar-with-toolbar ">
+    <div class="mdui-theme-layout-light">
+    <header id="appbar" class="mdui-appbar mdui-appbar-fixed mdui-shadow-0 mdui-appbar-scroll-hide">
+    <div class="mdui-toolbar">
+        <button mdui-drawer="{target: '.mdui-drawer'}" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">menu</i></button>
+        <a href="/" class="mdui-typo-title">Minamoto&#39;s space</a>
+        <div class="mdui-toolbar-spacer"></div>
+        
+        <a href="/search/" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">search</i></a>
+        
+    </div>
+</header>
+    <aside class="mdui-drawer mdui-drawer-close">
+    <nav class="mdui-list" mdui-collapse="{accordion: true}">
+        <a href="/about/"  class="mdui-list-item mdui-ripple">
+            <div class="mdui-list-item-avatar">
+                
+                <i class="mdui-color-theme-primary mdui-icon material-icons">person</i>
+                
+            </div>
+            <div class="mdui-list-item-content">Minamoto</div>
+        </a>
+        <div class="mdui-divider"></div>
+        
+        <a href="/" class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            <div class="mdui-list-item-content">Home</div>
+        </a>
+        
+        <div class="mdui-collapse-item">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">inbox</i>
+                <div class="mdui-list-item-content">Archives</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                <a class="mdui-list-item mdui-ripple m-link" href="/archives/2022/12/">December 2022</a>
+            </div>
+        </div>
+        
+        <div class="mdui-collapse-item">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">apps</i>
+                <div class="mdui-list-item-content">Categories</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                
+            </div>
+        </div>
+        
+    </nav>
+    <div class="mdui-divider"></div>
+    <footer class="mdui-m-l-2 mdui-m-t-1 mdui-typo mdui-text-color-theme-disabled">
+        <p class="mdui-m-b-0">
+            
+            ©
+            2022 Minamoto<br>
+            
+            Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a><br>
+            
+            Theme - <a href="https://github.com/kwaa/hexo-theme-m" rel="noreferrer" target="_blank"
+                mdui-tooltip="{position:'right', content: 'by 藍+85CD'}">M</a></p>
+            
+    </footer>
+</aside>
+    </div>
+    <div class="mdui-container-fluid mdui-center" style="max-width:720px">
+        <article class="mdui-card mdui-hoverable mdui-shadow-1 mdui-m-y-2" style="opacity: 1; border-radius: 4px">
+    
+    <div class="mdui-card-primary mdui-ripple">
+    <div class="mdui-card-primary-title">
+        <a role="heading" aria-level="1" class="mdui-text-color-theme-text" >vim配置</a>
+        
+    </div>
+    <div class="mdui-card-primary-subtitle mdui-typo">
+        
+        <span mdui-tooltip="{content:'Created: 2022-12-16 11:57<br>Updated: 2022-12-16 04:12'}">2022-12-16 -</span>
+        
+            <span>2022/12/16/vim配置/</span>
+        
+    </div>
+</div>
+    
+    
+    <div class="mdui-divider"></div>
+    <div class="mdui-card-content mdui-typo">
+        
+        <p>Missing class in cs 中所提供的vim配置文件。修改~&#x2F;.vimrc为如下内容，可以简单的配置vim编辑的界面。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token string">" Comments in Vimscript start with a <span class="token variable"><span class="token variable">`</span>"<span class="token variable">`</span></span>.
+
+"</span> If you <span class="token function">open</span> this <span class="token function">file</span> <span class="token keyword">in</span> Vim, it<span class="token string">'ll be syntax highlighted for you.
+
+" Vim is based on Vi. Setting `nocompatible` switches from the default
+" Vi-compatibility mode and enables useful Vim functionality. This
+" configuration option turns out not to be necessary for the file named
+" '</span>~/.vimrc<span class="token string">', because Vim automatically enters nocompatible mode if that file
+" is present. But we'</span>re including it here just <span class="token keyword">in</span> <span class="token keyword">case</span> this config <span class="token function">file</span> is
+<span class="token string">" loaded some other way (e.g. saved as <span class="token variable"><span class="token variable">`</span>foo<span class="token variable">`</span></span>, and then Vim started with
+"</span> <span class="token variable"><span class="token variable">`</span><span class="token function">vim</span> <span class="token parameter variable">-u</span> foo<span class="token variable">`</span></span><span class="token punctuation">)</span>.
+<span class="token builtin class-name">set</span> nocompatible
+
+<span class="token string">" Turn on syntax highlighting.
+syntax on
+
+"</span> Disable the default Vim startup message.
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">shortmess</span><span class="token operator">+=</span>I
+
+<span class="token string">" Show line numbers.
+set number
+
+"</span> This enables relative line numbering mode. With both number and
+<span class="token string">" relativenumber enabled, the current line shows the true line number, while
+"</span> all other lines <span class="token punctuation">(</span>above and below<span class="token punctuation">)</span> are numbered relative to the current line.
+<span class="token string">" This is useful because you can tell, at a glance, what count is needed to
+"</span> jump up or down to a particular line, by <span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span>k to go up or <span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span>j to go
+<span class="token string">" down.
+set relativenumber
+
+"</span> Always show the status line at the bottom, even <span class="token keyword">if</span> you only have one window open.
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">laststatus</span><span class="token operator">=</span><span class="token number">2</span>
+
+<span class="token string">" The backspace key has slightly unintuitive behavior by default. For example,
+"</span> by default, you can<span class="token string">'t backspace before the insertion point set with '</span>i<span class="token string">'.
+" This configuration makes backspace behave more reasonably, in that you can
+" backspace over anything.
+set backspace=indent,eol,start
+
+" By default, Vim doesn'</span>t <span class="token builtin class-name">let</span> you hide a buffer <span class="token punctuation">(</span>i.e. have a buffer that isn<span class="token string">'t
+" shown in any window) that has unsaved changes. This is to prevent you from "
+" forgetting about unsaved changes and then quitting e.g. via `:qa!`. We find
+" hidden buffers helpful enough to disable this protection. See `:help hidden`
+" for more information on this.
+set hidden
+
+" This setting makes search case-insensitive when all characters in the string
+" being searched are lowercase. However, the search becomes case-sensitive if
+" it contains any capital letters. This makes searching more convenient.
+set ignorecase
+set smartcase
+
+" Enable searching as you type, rather than waiting till you press enter.
+set incsearch
+
+" Unbind some useless/annoying default key bindings.
+nmap Q &lt;Nop> " '</span>Q<span class="token string">' in normal mode enters Ex mode. You almost never want this.
+
+" Disable audible bell because it'</span>s annoying.
+<span class="token builtin class-name">set</span> noerrorbells visualbell <span class="token assign-left variable">t_vb</span><span class="token operator">=</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+        
+        <blockquote class="mdui-m-x-0 mdui-m-t-4">
+    <strong>
+        Author: <a href="/about/">Minamoto</a><br>
+        URL: <a href="https://minamoto25.github.io/2022/12/16/vim%E9%85%8D%E7%BD%AE/">https://minamoto25.github.io/2022/12/16/vim%E9%85%8D%E7%BD%AE/</a><br>
+        
+            This work is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> .
+        
+    </strong>
+</blockquote>
+        
+    </div>
+    
+</article>
+<nav class="mdui-theme-layout-light mdui-color-transparent mdui-row mdui-m-b-2">
+    
+        <div class="mdui-col-xs-12 mdui-m-b-2">
+            <a class="extend prev mdui-btn mdui-ripple mdui-float-left mdui-text-truncate" rel="prev"
+                style="max-width: 100%" href="/2022/12/16/watchTV/">
+                <i class="mdui-icon mdui-icon-left material-icons">arrow_back</i>watchTV
+            </a>
+        </div>
+    
+        <div class="mdui-col-xs-12">
+            <a class="extend next mdui-btn mdui-ripple mdui-float-right mdui-text-truncate" rel="next"
+                style="max-width: 100%" href="/2022/12/16/hello-world/">
+                <i class="mdui-icon mdui-icon-right material-icons">arrow_forward</i>Hello World
+            </a>
+        </div>
+    
+</nav>
+
+    </div>
+    <a href="#" class="mdui-fab mdui-fab-fixed mdui-hidden-xs mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">keyboard_arrow_up</i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
+
+
+<script>
+    var $ = mdui.$;
+    function init(){
+        //
+    }
+    window.addEventListener("load", () => {
+        //
+        init()
+    }, {once: true});
+</script>
+
+</body>
+</html>
